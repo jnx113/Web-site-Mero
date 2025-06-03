@@ -1,0 +1,808 @@
+/* Базовые стили */
+body {
+  background-color: rgba(0,0,0, 0.8);
+  min-width: 1040px;
+}
+
+.bg-container {
+  background-color: black;
+  background-image: url("../images/backgroundCard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+}
+
+/* /* Мобильные стили */
+@media (width: 2560px){
+  .main-image h1:first-of-type{
+    font-size: 54px;
+    left: 470px !important;
+  }
+
+  #dislike{
+    right: 0 !important;
+    left: -300px !important;
+    top: 40% !important;
+  }
+  
+  #like{
+    left: 430px !important;
+    top: 40% !important;
+  }
+  
+
+  .main-image h1:last-of-type{
+    font-size: 54px !important;
+    right: 600px !important;
+  }
+
+  #filtr{
+    left: 450px;
+  }
+  .up-button{
+    margin-right: 100px;
+  }
+
+  .left-card{
+    transform: translate(150%, 50%) scale(1.15) !important;
+    z-index: 10;
+  }
+
+  .right-card{
+    transform: translate(-150%, 50%) scale(1.15) !important;
+    z-index: 10;
+  }
+
+  .center-card{
+    transform: translate(0, 50%) scale(1.15) !important;
+    z-index: 10;
+  }
+}
+@media (max-width: 1040px) {
+  body {
+      overflow-x: hidden;
+      width: 1040px;
+  }
+  
+  .bg-container {
+      background-attachment: fixed;
+      background-size: contain !important;
+      background-repeat: repeat-y;
+  }
+  
+  nav {
+      margin: 0;
+      padding: 0;
+      width: 93%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      justify-content: flex-end;
+
+  }
+  
+  nav .change-theme {
+      margin-right: 0;
+      order: -1;
+      display: none;
+  }
+  
+  #searchInput {
+      width: 90%;
+      margin: 10px auto;
+  }
+  
+  .nav-list {
+      margin-right: 0;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 15px;
+  }
+  
+  .nav-item {
+      height: 40px;
+  }
+  
+  .selected-page {
+      width: 60px;
+      background-position: 50% 5px;
+  }
+  
+  .nav-item:nth-of-type(2) {
+      margin-left: 0;
+  }
+  
+  .nav-item:nth-of-type(3) {
+      margin-left: 0;
+  }
+  
+  main {
+      width: 95%;
+      padding: 10px;
+      position: relative;
+      background-color: rgb(218, 218, 218) !important;
+  }
+  
+  .main-image {
+      height: auto;
+      padding: 20px 0;
+      background-size: contain;
+  }
+  
+  .main-image h1 {
+    position: absolute;
+      font-size: 34px !important;
+      position: static;
+      text-align: center;
+      margin: 10px 0 !important;
+      top: 200px !important;
+      left: 150px !important;
+  }
+
+  .main-image h1:last-of-type{
+    width: 300px !important;
+    top: 300px !important;
+    left: 510px !important;
+  }
+  
+  #filtr {
+      width: 200px ;
+      grid-template-columns: 1fr 1fr 1fr !important;
+      height: auto;
+      row-gap: 15px;
+      margin-top: 20px;
+      top: 280px;
+      transform: scale(0.7);
+      left: 0;
+  }
+  
+  .card-list {
+      grid-template-columns: 354px !important;
+      row-gap: 30px;
+      margin-top: -230px !important;
+      padding-bottom: 50px;
+  }
+  
+  .mero-info {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+  }
+  
+  .left-card,
+  .right-card,
+  .center-card {
+      z-index: auto;
+  }
+  
+  .dislike-button,
+  .like-button {
+      width: 45%;
+      margin: 10px auto;
+      display: block;
+      left: 300px !important;      
+  }
+  .dislike-button{
+    top: 40% !important;
+    left: -235px !important;
+  }
+  
+  .left-card .dislike-button{
+    right: 365px !important;
+    top: 40% !important;
+
+  }
+  
+} 
+
+/* Навигационная панель */
+header {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: flex-end;
+}
+
+nav a {
+  margin-top: 21px;
+  margin-bottom: 15px;
+}
+
+nav .change-theme {
+  margin-right: auto;
+}
+
+#searchInput {
+  width: 356px;
+  height: 38px;
+  border-radius: 13px;
+  border: none;
+  align-self: flex-end;
+  margin-bottom: 5px;
+  margin-right: 100px;
+  background-color: rgba(229, 222, 220, 0.5);
+  outline: none;
+  cursor: pointer;
+  padding-left: 40px;
+  background-image: url("../images/loop.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+#searchInput::placeholder {
+  color: rgba(214, 203, 203, 1);
+  font-family: "Sansation", "Arial", sans-serif;
+  font-size: 11px;
+  padding-top: 5px;
+  display: block;
+  height: inherit;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  margin-right: 359px;
+  height: 54px;
+  margin-top: auto;
+}
+
+.nav-item {
+  height: 54px;
+}
+
+.selected-page {
+  width: 81px;
+  background-color: rgba(243, 241, 241, 0.8);
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
+  background-image: url("../images/list-selected.png");
+  background-repeat: no-repeat;
+  background-position: 50% 10px;
+}
+
+.selected-page {
+  pointer-events: none
+}
+
+.selected-page>a>span {
+  color: #282222;
+  font-weight: normal;
+}
+
+.nav-item a {
+  color: #ffffff;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: lighter;
+  display: inline-block;
+  height: inherit;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nav-item>a>span {
+  margin-bottom: 5px;
+}
+
+.nav-item:nth-of-type(2) {
+  margin-left: 50px;
+  background-image: url("../images/calendar-not.png");
+  background-repeat: no-repeat;
+  background-position: 50% 5px;
+}
+
+.nav-item:nth-of-type(3) {
+  background-image: url("../images/heart.png");
+  background-repeat: no-repeat;
+  background-position: 18px 5px;
+  margin-left: 37px;
+}
+
+.nav-item:hover:not(.nav-item:nth-of-type(1):hover) {
+  opacity: 0.4;
+}
+
+.nav-item:active:not(.nav-item:nth-of-type(1):active) {
+  opacity: 0.2;
+}
+
+.change-theme:hover img,
+.user:hover img {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.change-theme:active img,
+.user:active img {
+  opacity: 0.5;
+}
+
+/* Основной контент */
+main {
+  position: relative;
+  width: 93%;
+  height: auto;
+  background-color: rgba(243, 241, 241, 0.8);
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay {
+  position: absolute;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 200%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showcase {
+  position: relative;
+}
+
+.main-image {
+  position: relative;
+  background-image: url("../images/urfu.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 761px;
+}
+
+.main-image h1 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.main-image h1:first-child {
+  top: 380px;
+  left: 206px;
+}
+
+.main-image h1:last-child {
+  top: 545px;
+  right: 317px;
+}
+
+.filters {
+  position: absolute;
+  top: 551px;
+  left: 160px;
+  width: 546px;
+  height: 154px;
+  display: grid;
+  grid-template-columns: 144px 155px 213px;
+  column-gap: 17px;
+  user-select: none;
+}
+
+.icon-filter {
+  padding: 0;
+  margin: 0;
+  padding-left: 34px;
+  background: url("../images/settings.png") no-repeat 5px 0;
+  font-size: 14px;
+  color: #211A1A;
+  font-weight: bold;
+}
+
+.date-of-mero p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;   
+  width: 155px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid black; 
+}
+
+#eventDate {
+  width: 133px;
+  height: 20px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: inherit;
+  margin-top: 4px;
+  padding-left: 7px;
+}
+
+#eventDate::placeholder {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.category {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 230px;
+}
+
+.category-item:not(.category-item:first-of-type) {
+  text-decoration: none;
+  color: #6C6C6C;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.selected-category {
+  color: black !important;
+}
+
+.selected-category img {
+  margin-left: 5px;
+}
+
+.category-item:first-child {
+  font-size: 16px;
+  font-weight: bold;   
+  text-decoration: none;
+  color: black;
+  width: 155px;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.category-item:not(.category-item:first-of-type) {
+  margin-bottom: 5px;
+}
+
+.category-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.category-item:not(.category-item:first-of-type):hover {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Карточки */
+.card-list {
+  position: relative;
+  margin-top: 104px;
+  padding-bottom: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 354px);
+  column-gap: 177px;
+  row-gap: 180px;
+  justify-content: center;
+}
+
+.swiped-left {
+  transform: translateX(-100%) rotate(-5deg);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiped-right {
+  transform: translateX(100%) rotate(5deg);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.up-button {
+  position: absolute;
+  position: fixed;
+  z-index: 3;
+  right: 110px;
+  top: 50%;
+  cursor: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.up-button:active {
+  opacity: 0.5 !important;
+}
+
+.mero-info {
+  position: relative;
+  width: 354px;
+  height: 437px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  user-select: none;
+}
+
+.left-card{
+  transform: translate(150%, 50%) scale(1.15);
+  z-index: 10;
+}
+
+.right-card{
+  transform: translate(-150%, 50%) scale(1.15);
+  z-index: 10;
+}
+
+.center-card{
+  transform: translate(0, 50%) scale(1.15);
+  z-index: 10;
+}
+
+.mero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.mero-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Кнопки */
+.dislike-button,
+.like-button {
+  width: 217px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #F3F1F0;
+  border: 1px solid black;
+  border-radius: 35px;
+  box-shadow: 1px 1px 4px 0 #9C989740
+  inset 1px 1px 2px 0 #FFFFFF40;
+}
+
+.dislike-button {
+  position: absolute;
+  left: -300px;
+  top: 40%;
+  border-color: #B0041A;
+  color: #B0041A;
+  transition: color, background-color 1s ease;
+}
+
+.like-button {
+  position: absolute;
+  right: -300px;
+  top: 40%;
+  border-color: #04B04C;
+  color: #04B04C;
+  transition: color, background-color 1s ease;
+}
+
+
+.dislike-button img,
+.like-button img {
+  position: absolute;
+  z-index: 1;
+}
+
+.dislike-button img {
+  top: 38%;
+  left: 25px;
+  filter: invert(11%) sepia(76%) saturate(4953%) hue-rotate(344deg) brightness(94%) contrast(107%);
+}
+
+.like-button img {
+  top: 38%;
+  right: 25px;
+  filter: invert(50%) sepia(27%) saturate(4838%) hue-rotate(113deg) brightness(92%) contrast(97%);
+}
+
+.dislike-button p {
+  padding: 0;
+  margin: 19px 40px 19px 57px;
+  user-select: none;
+}
+
+.like-button p {
+  padding: 0;
+  margin: 19px 67px 19px 58px;
+  user-select: none;
+}
+
+.dislike-button:hover {
+  background-color: #B0041A;
+  color: white;
+}
+
+.like-button:hover {
+  background-color: #04B04C;
+  color: #FFFFFF;
+}
+
+.like-button:hover img,
+.dislike-button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.like-button:active,
+.dislike-button:active {
+  opacity: 0.5;
+}
+
+/* Стороны карточки */
+.mero-info-face,
+.mero-info-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.mero-info-face {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.mero-info-back {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.mero-info-face a,
+.mero-info-back a {
+  text-decoration: none;
+  display: block;
+}
+
+.name-of-event-face {
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.count-users {
+  color: #7e7e7e;
+  font-size: 10px;
+  font-weight: normal;
+  border-top: 1px solid #F2EBE8;
+  padding-top: 10px;
+  padding-left: 30px;
+  background: url("../images/count-users.png") no-repeat 15px bottom;
+}
+
+/* Обратная сторона карточки */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  flex-wrap: wrap;
+}
+
+.name-of-event-back {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-left: 21px;
+}
+
+.location-time {
+  list-style: none;
+  padding: 0;
+  margin: 0;color: black;
+  font-size: 13px;
+  margin-right: 21px;
+}
+
+.address {
+  margin-bottom: 14px;
+}
+
+.description {
+  margin-left: 21px;
+  width: 229px;
+  color: black;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 13px;
+  margin-bottom: 0;
+}
+
+.social-links {
+  color: black;
+  display: flex;
+  margin: 0;
+  margin-left: 21px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0;
+  list-style: none;
+  margin-top: 25px;
+}
+
+.more-info {
+  font-weight: bold;
+}
+
+.social-links li a {
+  color: #000000;
+  display: inline-flex;
+  font-size: 14px;
+  transition: 0.5s color ease;
+}
+
+.social-links li a:hover {
+  color: rgb(27, 81, 231)
+}
+
+/* Подвал */
+footer {
+  height: 100px;
+  display: grid;
+  grid-template-columns: 235px 500px;
+  column-gap: 90px;
+}
+
+footer p {
+  color: white;
+}
+
+.name-team {
+  margin-left: 99px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.name-team img {
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+footer div {
+  align-self: center;
+}
+
+footer div p,
+footer div a {
+  font-size: 11px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer div a {
+  display: inline;
+}
+
+footer div a:hover {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+footer div a:active {
+  opacity: 0.5;
+}

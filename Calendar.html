@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/calendar32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/calendar16x16.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/calendarStyle.css">
+    <title>Календарь</title>
+</head>
+<body>
+<div class="overlay overlay-none"><img src="images/black.jpg" alt=""></div>
+    <div class="bg-container">
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html"><span>Лента</span></a></li>
+                    <li class="nav-item selected-page"><a href="#"><span>Календарь</span></a></li>
+                    <li class="nav-item"><a href="preferences.html"><span>Понравилось</span></a></li>
+                </ul>
+                <a class="user" href="Cabinet.html" title="Войти в аккаунт">
+                    <img src="images/user.png" alt="Войти в аккаунт" width="40" height="40">
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            
+          <div class="mero-info center card-none">  
+            <div class="mero-inner">  
+            <div class="mero-info-face">
+                <img src="images/mero-img.jpg">
+                <h1 class="name-of-event-face">Время Карьеры</h1>
+                <p class="count-users">... записались</p>
+            </div>
+
+            <div class="mero-info-back">
+                <div class="flex-container">
+                <h1 class="name-of-event-back">Время Карьеры</h1>
+                <ul class="location-time">
+                    <li class="address">Ул. Мира 19</li>
+                    <li class="time">18 апреля</li>
+                </ul>
+                </div class="flex-container">
+                <p class="description">Время карьеры уже близко</p>
+                <p class="description">
+                    Совсем скоро пройдет масштабное мероприятие с участием ведущих работодателей 
+                    страны. Также ты сможешь получить мерч от компаний-партнеров или выиграть 
+                    крутые подарки. Если ты давно задумываешься над тем, как начать свой 
+                    профессиональный путь, то обязательно приходи 18 апреля 
+                    в главный учебный корпус!</p>
+                <ul class="social-links">
+                    <li class="more-info">Подробнее:</li>
+                    <li class ="tg"><a href="#">Телеграмм-канал</a></li>
+                    <li class="vk"><a href="#">Группа вк</a></li>
+                </ul>            
+            </div>
+        </div> 
+        </div>
+        
+
+
+            <section class="calendar">
+                <div class="calendar-buttons">
+                <span class="month" id="monthYear">Март 2025</span>
+
+                <a href="#" class="show-months">
+                    <img src="images/downArrow.png">
+                </a>
+
+                <a href="#" class="prewievs-month" id="prevMonth">
+                    <img src="images/leftArrow.png" class="leftArrow">
+                </a>
+                <a href="#" class="next-month" id="nextMonth"><img src="images/rightArrow.png" class="rightArrow"></a>
+                </div>
+                <div class="per-month" id="peronth">
+                    <div class="select-year">
+                    <a href="#" class="change-year" id="prevYear"><img src="images/smallAL.png"></a>
+                    <span class="selected-year">2025</span>
+                    <a href="#" class="change-year" id="nextYear"><img src="images/smallAR.png"></a>
+                </div>
+                    <ul class="all-months" id="allMonths">
+                        <li class="month-panel"><a href="#" class="month-panel-href">Январь</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Май</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Сентябрь</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Февраль</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Июнь</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Октябрь</a></li>
+                        <li class="month-panel this-month"><a href="#" class="month-panel-href">Март</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Июль</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Ноябрь</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Апрель</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Август</a></li>
+                        <li class="month-panel"><a href="#" class="month-panel-href">Декабрь</a></li>
+                    </ul>
+                </div>
+                <ul class="week">
+                    <li class="week-day">пн</li>
+                    <li class="week-day">вт</li>
+                    <li class="week-day">ср</li>
+                    <li class="week-day">чт</li>
+                    <li class="week-day">пт</li>
+                    <li class="week-day">сб</li>
+                    <li class="week-day">вс</li>
+                </ul>
+                <ul class="calendar-list" id="daysContainer">
+                    <li class="calendar-item"><a href="#" class="calendar-href">1</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">2</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">3</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">4</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">5</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">6</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">7</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">8</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">9</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">10</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">11</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">12</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">13</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">14</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">15</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">16</a></li>
+                    <li class="calendar-item this-day"><a href="#" class="calendar-href">17</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">18</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">19</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">20</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">21</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">22</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">23</a></li>
+                    <li class="calendar-item">
+                        <div class="lesson-rectangle"></div>
+                        <div class="mero-rectangle"></div>
+                        <a href="#" class="calendar-href">24</a>
+                    </li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">25</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">26</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">27</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">28</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">29</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">30</a></li>
+                    <li class="calendar-item"><a href="#" class="calendar-href">31</a></li>
+                </ul>
+            </section>
+
+            <section class="timetable">
+                <p class="selected-day">пн 17.03</p>
+                <ul class="routine-list">
+                    <li class="routine-item lesson">
+                        <time datetime="">8:30-10:00</time>
+                        <p class="name-of-mero">Физика</p>
+                        <address>адрес</address>
+                    </li>
+
+                    <li class="routine-item mero">
+                        <a href="#" class="open-info">Открыть инфо</a>
+                        <a href="#" class="delete-mero"><img src="images/trash.svg" alt=""></a>
+                        <time datetime="">12:00-13:30</time>
+                        <p class="name-of-mero">Меро</p>
+                        <address>адрес</address>
+                    </li>
+
+                    <li class="routine-item mero">
+                        <a href="#" class="open-info">Открыть инфо</a>
+                        <a href="#" class="delete-mero"><img src="images/trash.svg" alt=""></a>
+                        <time datetime="">14:15-17:00</time>
+                        <p class="name-of-mero">Меро</p>
+                        <address>адрес</address>
+                    </li>
+
+                    <li class="routine-item lesson">
+                        <time datetime="">17:40-19:10</time>
+                        <p class="name-of-mero">Программирование</p>
+                        <address>адрес</address>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p class="name-team"><img src="images/round.png" width="24" height="24">Гуматинарии</p>
+        <div>
+            <p class="email">mymero@gmail.com</p>
+            <a href ="#" class="social-link">
+                https://vk.com/away.php?to=http%3A%2F%2Fproject.ai-info.ru&utf=1
+            </a>
+        </div>
+    </footer>
+    <script src="scripts/calendarScript.js"></script>
+</body>
+</html>

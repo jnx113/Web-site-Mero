@@ -1,0 +1,578 @@
+body{
+  background-color: black;
+  background-image: url("../images/backgroundCard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+/* .bg-container{
+    background-color: black;
+    background-image: url("../images/backgroundCard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+  
+  } */
+
+@media(max-width: 1040px){
+  main{
+    flex-direction: column !important;
+  }
+
+  .user-input{
+    transform: scale(1);
+    margin-left: 0 !important;
+    z-index: 2;
+    right: -70px;
+    top: 35px;
+    order: 1;
+    margin-top: -70px !important;
+  }
+
+  .user-settings{
+    padding-top: 10px;
+  }
+
+  .background-color-footer{
+    margin-top: 80px;
+    position: static !important;
+  }
+
+}
+
+  header{
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  nav{
+    margin: 0;
+    padding: 0;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-end;
+    
+  }
+  
+  
+  nav a{
+    margin-top: 21px;
+    margin-bottom: 15px;
+  }
+  
+  nav .change-theme{
+    margin-right: auto;
+  }
+  
+  /* Навигационная панель */
+  
+  
+  .nav-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin-right: 359px;
+    height: 54px;
+    margin-top: auto;
+  }
+  
+  .nav-item{
+    height: 54px;
+  }
+  
+
+  
+  .nav-item a{
+    color: #ffffff;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: lighter;
+    display: inline-block;
+    height: inherit;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  
+  }
+  
+  .nav-item>a>span{
+    margin-bottom: 5px;
+
+  
+  }
+  
+  .nav-item:nth-of-type(1){
+    margin-left: 50px;
+    background-image: url("../images/list.png");
+    background-repeat: no-repeat;
+    background-position: 50% 5px;
+  } 
+  
+  .nav-item:nth-of-type(2){
+    margin-left: 50px;
+    background-image: url("../images/calendar-not.png");
+    background-repeat: no-repeat;
+    background-position: 50% 5px;
+  }
+  
+  .nav-item:nth-of-type(3){
+    background-image: url("../images/heart.png");
+    background-repeat: no-repeat;
+    background-position: 18px 5px;
+    margin-left: 37px;
+  }
+  
+  
+  .nav-item:hover{
+    opacity: 0.4;
+  }
+  
+  .nav-item:active{
+    opacity: 0.2;
+  }
+  
+.change-theme:hover img,
+.user:hover img{
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+  
+ .change-theme:active img,
+ .user:active img{
+  opacity: 0.5;
+}
+
+
+main{
+    position: relative;
+    width: 93%;
+    height: auto;
+    background-color: #f3f1f1;
+    border-radius: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 115px;
+    padding-top: 80px;
+    padding-bottom: 37px;
+}
+
+
+/*Добавление пары и изменение фото профиля  */
+
+.user-input{
+    width: 450px;
+    height: 450px;
+    align-self: center;
+    margin-left: 180px;
+}
+
+.edit-subject,
+.input-image{
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff;
+  border-radius: 14px;
+}
+
+
+
+.input-image{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-subject form{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.edit-subject h1{
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: #613636;
+  padding-top: 30px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.edit-subject input{
+  margin: 0;
+  padding: 0;
+  width: 276px;
+  height: 36px;
+  outline: none;
+  border: 1px solid #DAC9C9;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-subject input:not(input[type="submit"]){
+  padding-left: 20px;
+}
+
+.edit-subject input::placeholder{
+  padding-left: 0;
+}
+
+.edit-subject input[type="text"]:hover,
+.edit-subject input[type="text"]:focus{
+  border-color: #AC9292;
+}
+
+.edit-subject input[type="submit"]{
+  background-color: white;
+  border-width: 2px;
+  border-color: #AC9292;
+  font-family: "Sansation", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.edit-subject input[type="submit"]:hover{
+  background-color: #AC9292;
+  color: white;
+}
+
+.edit-subject input[type="submit"]:active{
+  opacity: 0.7;
+}
+
+.edit-subject p{
+  margin: 0;
+  padding: 0;
+  margin-top: 55px;
+  font-size: 15px;
+  color: #613636;
+}
+
+.input-image{
+  position: relative;
+  justify-content: center;
+}
+
+.change-image{
+  cursor: pointer;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+}
+
+.change-image:hover{
+  opacity: 0.6;
+}
+
+.change-image:active{
+  opacity: 0.3;
+}
+  /*Настройки */
+
+.user-settings{
+    position: relative;
+    width: 950px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    align-self: center;
+}
+
+  .user-settings h1{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #3E3D3E;
+    font-size: 26px;
+    font-weight: bold;
+    top: -55px;
+    left: 15px;
+  }
+
+.user-image-button{
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: 45px;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.user-image-button:hover{
+  opacity: 0.6;
+}
+
+.user-image-button:active{
+  opacity: 0.3;
+}
+
+form{
+  margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 45px;
+}
+
+.user-settings input{
+    width: 275px;
+    height: 36px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #DAC9C9;
+    background-image: url("../images/edit-input-light.png");
+    background-repeat: no-repeat;
+    background-position: 270px center;
+}
+
+.user-settings input:hover{
+  border-color: #AC9292;
+  background-image: none;
+  background-image: url("../images/edit-input.png");
+}
+
+.user-settings input:focus{
+  background-image: none;
+}
+
+input[type="text"]::placeholder{
+    color: #00000080;
+}
+
+form input{
+  padding-left: 20px;
+}
+
+input::placeholder{
+    font-size: 15px;
+    font-family: "Sansation", "Arial", sans-serif;
+    color: #000000;
+}
+
+.buttons{
+    display: flex;
+    margin-left: 45px;
+    margin-right: 45px;
+    justify-content: space-between;
+}
+
+.show-timetable,
+.save{
+    cursor: pointer;
+    padding: 0;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #F6EEEE;
+    border: 1px solid #DAC9C9;
+    padding: 9px 83px 10px 13px;
+    border-radius: 7px;
+    user-select: none;
+}
+
+.show-timetable:hover,
+.save:hover{
+  background-color: #FFF6F6;
+}
+
+.show-timetable:active,
+.save:active{
+  background-color: #F3E8E8;
+  box-shadow: inset 1px 1px 3px 0 #CEBABA,
+  inset -1px -1px 4px 0 #ffffff;
+}
+
+.timetable{
+    visibility: hidden;
+    width: 859px;
+    background-color: white;
+    border: 1px solid #000000E5;
+    border-radius: 7px;
+    margin: 16px 45px 45px 45px;   
+}
+
+.days{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 799px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DAC9C9;
+}
+
+.days li{
+    color: #3E3D3E;
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 92px;
+
+}
+
+.days li:first-of-type{
+    margin-left: 50px;
+}
+
+.days li:last-of-type{
+    margin-right: 51px;
+}
+
+.subject-container{
+  margin-left: 38px;
+  margin-right: 38px;
+  display: grid;
+  grid-template-columns: repeat(7, 105px);
+  column-gap: 8px;
+}
+
+.subject-container ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+.subject-container li{
+  width: 105px;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.subject-container li:last-of-type{
+  margin-bottom: 0;
+}
+
+.add-subject{
+  background-color: #DAC9C9;
+  background-image: url("../images/additem.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.add-subject:hover{
+  background-color: #8d7e7e;
+}
+
+.add-subject:active{
+  opacity: 0.6;
+}
+
+.subject{
+  background-color: #D2D2D2;
+  background-image: url("../images/removeitem.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.subject:hover{
+  background-color: #a4a4a4;
+}
+
+.subject:active{
+  opacity: 0.7;
+}
+
+.name-of-subject{
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  width: 72px !important;
+  margin-left: 7px;
+  line-height: 10px;
+  line-height: 15px;
+  word-wrap: break-word;
+}
+
+.time-of-subject{
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-weight: normal;
+  color: #000000B2;
+  margin-left: 7px;
+}
+
+
+ /* Подвал */
+
+
+.background-color-footer{
+  position: absolute;
+  align-self: flex-start;
+  background-color: #2b2b2b;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: -5;
+
+}
+ footer{
+  height: 100px;
+  display: grid;
+  grid-template-columns: 235px 500px;
+  column-gap: 90px;
+}
+
+footer p{
+  color: white;
+}
+
+.name-team{
+  margin-left: 99px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.name-team img{
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+footer div{
+  align-self: center;
+}
+
+footer div p,
+footer div a{
+  font-size: 11px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer div a{
+  display: inline;
+}
+
+footer div a:hover{
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+footer div a:active{
+  opacity: 0.5;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/calendar32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/calendar16x16.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/cardListStyle.css">
+    <title>Лента</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="bg-container">
+    <header>
+        <nav>
+            <input type="search" id="searchInput" placeholder="Найти мероприятие">
+            <ul class="nav-list">
+                <li class="nav-item selected-page"><a href="#"><span>Лента</span></a></li>
+                <li class="nav-item"><a href="Calendar.html"><span>Календарь</span></a></li>
+                <li class="nav-item"><a href="preferences.html"><span>Понравилось</span></a></li>
+            </ul>
+            <a class="user" href="Cabinet.html" title="Войти в аккаунт">
+                <img src="images/user.png" alt="Войти в аккаунт" width="40" height="40">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="showcase">
+            <article class="main-image">
+            <h1>Все события твоего университета </h1>
+            <h1>В одном месте</h1>
+            </article>
+            <div class="filters" id="filtr">
+                <p class="icon-filter">Фильтры</p>
+                <div class="date-of-mero">
+                    <p>Дата проведения</p>
+                    <input type="text" id="eventDate" name="eventDate" placeholder="дд.мм">
+                    <span></span>
+                </div>
+                <ul class="category">
+                    <li class="category-item">Категория</li>
+                    <li class="category-item"><span>Стажировка</span></li>
+                    <li class="category-item"><span>Волонтерство</span></li>
+                    <li class="category-item"><span>Научные мероприятия</span></li>
+                    <li class="category-item"><span>Развлекательные мероприятия</span></li>
+                    <li class="category-item"><span>Спортивные мероприятия </span></li>
+                    <li class="category-item"><span>Мастер-классы и тренинги</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card-list">
+            <img src="images/upButton.svg" class="up-button">
+
+        </section>
+    </main>
+</div>
+    <footer>
+        <p class="name-team"><img src="images/round.png" width="24" height="24">Гуматинарии</p>
+        <div>
+            <p class="email">mymero@gmail.com</p>
+            <a href ="#" class="social-link">
+                https://vk.com/away.php?to=http%3A%2F%2Fproject.ai-info.ru&utf=1
+            </a>
+        </div>
+    </footer>
+    <script src="scripts/List.js"></script>
+</body>
+</html>
