@@ -403,7 +403,7 @@ main {
   padding: 0;
   margin: 0;
   padding-left: 34px;
-  background: url("../images/settings.png") no-repeat 5px 0;
+  background: url("/images/settings.png") no-repeat 5px 0;
   font-size: 14px;
   color: #211A1A;
   font-weight: bold;
