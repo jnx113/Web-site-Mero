@@ -7,7 +7,7 @@ function createReviewButtons() {
     const dislike = document.createElement("div");
     dislike.className = "dislike-button";
     dislike.id = "dislike";
-    dislike.innerHTML = `<img src="/images/dislike.svg"><p>Не нравится</p>`;
+    dislike.innerHTML = `<img src="../images/dislike.svg"><p>Не нравится</p>`;
     dislike.addEventListener("click", (event) => {
         event.stopPropagation();
 
@@ -16,7 +16,7 @@ function createReviewButtons() {
     const like = document.createElement("div");
     like.className = "like-button";
     like.id = "like";
-    like.innerHTML = `<img src="/images/like.svg"><p>Нравится</p>`;
+    like.innerHTML = `<img src="../images/like.svg"><p>Нравится</p>`;
     like.addEventListener("click", (event) => {
         event.stopPropagation();
 
@@ -36,7 +36,7 @@ for(let categoryItem of categoryItems){
 
             // Создаём новый img элемент каждый раз
             let exitImage = document.createElement("img");
-            exitImage.src = "../images/exit.svg";
+            exitImage.src = "/images/exit.svg";
             exitImage.classList.add("exit-icon"); // можно добавить класс для стилизации
             this.appendChild(exitImage);
         } 
