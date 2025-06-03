@@ -148,7 +148,7 @@ events.forEach((event, index) => {
                     <p class="count-users">${event.count}</p>
                     <div class="use-card">
                         <p class="add-to-calendar">Добавить в календарь</p>
-                        <img src="../images/trash-pref.svg" class="trash-pref">
+                        <img src="images/trash-pref.svg" class="trash-pref">
                     </div>
                 </div>
             </div>
