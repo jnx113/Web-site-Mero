@@ -7,7 +7,7 @@ function createReviewButtons() {
     const dislike = document.createElement("div");
     dislike.className = "dislike-button";
     dislike.id = "dislike";
-    dislike.innerHTML = `<img src="../images/dislike.svg"><p>Не нравится</p>`;
+    dislike.innerHTML = `<img src="/images/dislike.svg"><p>Не нравится</p>`;
     dislike.addEventListener("click", (event) => {
         event.stopPropagation();
 
@@ -16,7 +16,7 @@ function createReviewButtons() {
     const like = document.createElement("div");
     like.className = "like-button";
     like.id = "like";
-    like.innerHTML = `<img src="../images/like.svg"><p>Нравится</p>`;
+    like.innerHTML = `<img src="/images/like.svg"><p>Нравится</p>`;
     like.addEventListener("click", (event) => {
         event.stopPropagation();
 
@@ -204,7 +204,6 @@ cards.forEach((card, index) => {
             this.classList.add(positionClass);
             activeCard = this;
 
-            // Добавляем кнопки, если их ещё нет
             if (!this.querySelector(".review-buttons")) {
                 const buttons = createReviewButtons();
                 this.appendChild(buttons);
